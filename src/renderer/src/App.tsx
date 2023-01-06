@@ -1,5 +1,18 @@
-import './styles/global.css'
+import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
+import "./styles/global.css";
 
 export function App() {
-  return <h1 className="text-purple-400 font-bold text-4xl">Hello World</h1>
+  return (
+    <div className="h-screen w-screen text-rotion-100 flex">
+      <Sidebar />
+      <div className="flex-1 flex flex-col max-h-screen">
+        <Header />
+
+        <main className="flex-1 flex items-center justify-center text-rotion-400">
+          Selecione ou crie um documento
+        </main>
+      </div>
+    </div>
+  );
 }
